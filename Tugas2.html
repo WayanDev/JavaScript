@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Penghasilan</title>
+</head>
+
+<body align="left">
+    <h1>Hitung Penghasilan/Pendapatan</h1>
+    <script>
+        let nama = "Wayan";
+        let jabatan = "Asisten Manajer";
+        let status = "Belum Menikah";
+        let gapok, total, TJ, BPJS, TK = 0;
+
+        switch (jabatan) {
+            case 'Manajer':
+                gapok = 10000000;
+                break;
+            case 'Asisten Manajer':
+                gapok = 8000000;
+                break;
+            case 'Staff':
+                gapok = 5000000;
+                break;
+            default:
+                gapok = 0;
+        }
+
+        TJ = 0.1 * gapok;
+        BPJS = 0.1 * gapok;
+
+        if (status == 'Menikah') {
+            TK = 0.1 * gapok;
+            total = gapok + TJ + BPJS + TK;
+        } else {
+            total = gapok + TJ + BPJS;
+        }
+        document.write("Nama = " + nama +
+            "<br> Jabatan = " + jabatan +
+            "<br> Status = " + status +
+            "<br>" +
+            "<br> Gaji Pokok = " + gapok +
+            "<br> Tunjangan Jabatan = " + TJ +
+            "<br> BPJS = " + BPJS +
+            "<br> Tunjangan Keluarga = " + TK +
+            "<hr>" +
+            "<br> Total Penghasilan = " + total)
+    </script>
+</body>
+
+</html>
