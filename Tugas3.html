@@ -1,0 +1,95 @@
+<script>
+    //set grade A - E (menggunakan if multi kondisi)
+    // A = 90 - 100, B 80 - 89 dan seterusnya sampai E
+    //set predikat (menggunakan swtich case)
+    //A = Sangat baik, B = Baik, C = Cukup, D= Kurang, E = SAngat kurang
+    //set warna warni table menggunakan looping
+
+    //array of object
+    // atau array didalam array
+    // atau arraya yang menyimpan array
+
+    let p1 = {
+        nama: "Arip",
+        nilai: 20
+    };
+    let p2 = {
+        nama: "Ali",
+        nilai: 40
+    };
+    let p3 = {
+        nama: "Aldi",
+        nilai: 60
+    };
+    let p4 = {
+        nama: "Ani",
+        nilai: 80
+    };
+    let p5 = {
+        nama: "Budi",
+        nilai: 100
+    };
+
+    let person = [p1, p2, p3, p4, p5];
+</script>
+<h3>
+    <table style="padding: 10; text-align: center; width: 100%;">
+        <thead bgcolor="#d3d3d3">
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Nilai</th>
+                <th>Grade</th>
+                <th>Predikat</th>
+                <th>Keterangan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script>
+                var no = 1;
+                for (p of person) {
+                    let grade = "";
+                    let ket = (p.nilai > 60) ? "Lulus" : "Gagal";
+
+                    if (p.nilai >= 81 && p.nilai <= 100) grade = "A", warna = 'aqua';
+                    else if (p.nilai >= 61 && p.nilai <= 80) grade = "B", warna = 'lime';
+                    else if (p.nilai >= 41 && p.nilai <= 60) grade = "C", warna = 'yellow';
+                    else if (p.nilai >= 21 && p.nilai <= 40) grade = "D", warna = 'orange';
+                    else if (p.nilai >= 0 && p.nilai <= 20) grade = "E", warna = 'red';
+                    else grade = "", ket = "", warna = "white";
+
+                    //switch case mengubah satu kondisi ke kondisi lain
+                    switch (grade) {
+                        case "A":
+                            predikat = "Sangat Baik";
+                            break;
+                        case "B":
+                            predikat = "Baik";
+                            break;
+                        case "C":
+                            predikat = "Cukup";
+                            break;
+                        case "D":
+                            predikat = "Kurang";
+                            break;
+                        case "E":
+                            predikat = "Sangat Kurang";
+                            break;
+                        default:
+                            predikat = "";
+                            break;
+                    }
+
+                    document.write(`<tr bgcolor="${warna}">
+                        <td>${no++}</td>
+                        <td>${p.nama}</td>
+                        <td>${p.nilai}</td>
+                        <td>${grade}</td>
+                        <td>${predikat}</td>
+                        <td>${ket}</td>
+                    </tr>`)
+                }
+            </script>
+        </tbody>
+    </table>
+</h3>
