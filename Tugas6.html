@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 6 | WAYAN</title>
+    <script src="js/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+
+    <script>
+        $(document).ready(function () {
+            //pembuatan jquery dengan pemanggilan selector tag
+            $("input").click(function () {
+                alert("Selamat Belajar Jquery");
+            });
+            //pembuatan jquery dengan pemanggilan id
+            $("#panggil_id").css("color", "orange");
+            //pembuatan jquery dengan pemangilan class
+
+            $(".panggil_clas").css("color", "blue");
+
+            //menggunakan effect
+            $("p").hide(900);
+            $("p").slideDown(300);
+
+            $(".image1").click(function () {
+                $(".image1").hide();
+            });
+            $(".image2").click(function () {
+                $(".image2").hide();
+            });
+            $(".image3").click(function () {
+                $(".image3").hide();
+            });
+            $(".image4").click(function () {
+                $(".image4").hide();
+            });
+        });
+    </script>
+    <h3 id="panggil_id">Pertemuan 6</h3>
+    <h1 class="panggil_clas">Tugas 6</h1>
+
+    <p>Teksnya hilang</p><br>
+
+    <input type="submit" value="salam" /><br>
+
+    <img class="image1"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6mJ4fN1KOeij9qn2Yie2vTiYqrnnzR25-04Ug9aVlxHAQzbRYF-wSdfRgR3mpa79vH38&usqp=CAU"
+        alt=""><br>
+    <img class="image2"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaML0I0KcLZbntrwH4PfE7IebSYg77rWbW90sf8mhho4SPRd2gb35HUhA47x7BhJ43p1g&usqp=CAU"
+        alt=""><br>
+    <img class="image3"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFLSgKgVGwQhbFI9GzLlud5wDKCeRezv02dNGCBI5tkXWcM6Je-3z8d1ICZbNBq5wTtOs&usqp=CAU"
+        alt=""><br>
+    <img class="image4"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkYUh92U-G4d7KAaAuSP3Not0QWkpbb1jbkl6iN6SYGXcEkVqj9tEKR7-36L2Rj81EL0E&usqp=CAU"
+        alt="">
+
+
+</body>
+
+</html>
